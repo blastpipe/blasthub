@@ -186,3 +186,27 @@ end)
 Muting:addButton("Unbackpack Mute", function()
 	backpackmute = false
 end)
+Misc:addButton("Suitcase boombox ( must be r6 )", function()
+	local plr = game:GetService("Players").LocalPlayer
+        local charr = game:GetService("Players").LocalPlayer.Character
+        local players = game:GetService("Players"):GetPlayers()
+        local gameid = game.PlaceId
+        grip = true
+        if plr.Character:FindFirstChild("Animate").Disabled == true then return end
+                plr.Character.Humanoid:UnequipTools()
+                
+                plr.Character:FindFirstChild("Animate"):FindFirstChild("toolnone"):FindFirstChild("ToolNoneAnim").AnimationId = "nil"        
+                plr.Character.Humanoid:UnequipTools()
+        
+        for _,z in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
+            if z:IsA'Tool' then
+                z.Parent = game.Players.LocalPlayer.Character
+                z.Grip = CFrame.new(0.02, 0.71, 0)
+                z.GripUp = Vector3.new(1, -0, 0)
+                z.GripRight = Vector3.new(0, 0, 1)
+                z.GripForward = Vector3.new(-0, -1, 0)
+                        t.Handle.Massless = true
+                        t.Parent = plr.Character
+            end
+        end      
+end)
