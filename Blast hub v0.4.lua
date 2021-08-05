@@ -171,4 +171,18 @@ Misc:addButton("daily reward dupe", function()
         game.ReplicatedStorage.ClaimReward:FireServer()
     end
 end)
-	
+Muting:addButton("Backpack Mute", function()
+	Muted = {}
+
+	backpackmute = true
+	repeat wait()
+		for i,v in pairs(game.Players:GetDescendants()) do
+			if v:IsA("Sound") then
+				v.Playing = false
+			end
+		end
+	until backpackmute == false
+end)
+Muting:addButton("Unbackpack Mute", function()
+	backpackmute = false
+end)
