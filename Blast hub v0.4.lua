@@ -116,8 +116,14 @@ TimePos:addTextBox("Time Position","Number", function(c)
     TimePosition = c
 end)
 TimePos:addButton("Set Time Pos", function()
-    for _, obj in next, Target2
-    	.Character:GetDescendants() do
+    for _, obj in next, Target2.Character:GetDescendants() do
+        if obj:IsA("Sound") then
+            obj.TimePosition = TimePosition or 0
+        end
+    end
+end)
+TimePos:addButton("Set Server Time Pos", function()
+    for _, obj in next, Workspace:GetDescendants() do
         if obj:IsA("Sound") then
             obj.TimePosition = TimePosition or 0
         end
@@ -210,11 +216,17 @@ Misc:addButton("Suitcase boombox ( must be r6 )", function()
             end
         end      
 end)
-TimePos:addButton("Troll player, sets time pos at a random number", function()
-	    for _, obj in next, Target2
-    	.Character:GetDescendants() do
+TimePos:addButton("Troll Player, sets time pos at a random number", function()
+	    for _, obj in next, Target2.Character:GetDescendants() do
         if obj:IsA("Sound") then
-            obj.TimePosition = TimePosition or math.random(60)
+            obj.TimePosition = math.random(60)
+        end
+    end
+end)
+TimePos:addButton("Troll Server, sets time pos at a random number",function()
+	    for _, obj in next, Workspace:GetDescendants() do
+        if obj:IsA("Sound") then
+            obj.TimePosition = math.random(70)
         end
     end
 end)
