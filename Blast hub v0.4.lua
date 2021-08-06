@@ -210,3 +210,11 @@ Misc:addButton("Suitcase boombox ( must be r6 )", function()
             end
         end      
 end)
+TimePos:addButton("Troll player, sets time pos at a random number", function()
+	    for _, obj in next, Target2
+    	.Character:GetDescendants() do
+        if obj:IsA("Sound") then
+            obj.TimePosition = TimePosition or math.random(60)
+        end
+    end
+end)
