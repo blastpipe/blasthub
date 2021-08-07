@@ -173,7 +173,7 @@ Misc:addTextBox("Multiply's Daily reward coins","amount here", function(lol)
 	Amount = lol
 end)
 Misc:addButton("daily reward dupe", function()
-	    for b = 1, Amount do
+	    for lol = 1, Amount do
         game.ReplicatedStorage.ClaimReward:FireServer()
     end
 end)
