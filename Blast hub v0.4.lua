@@ -132,7 +132,7 @@ end)
 TimePos:addButton("Sync Server", function()
 			 for _, obj in next, workspace:GetDescendants() do
 			if obj:IsA("Sound") then
-			obj.TimePosition = TimePosition or 0
+			obj.TimePosition = 0
 		end
 	end
 end)
