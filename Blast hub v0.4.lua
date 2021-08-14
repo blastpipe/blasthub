@@ -31,7 +31,7 @@ Main:addButton("Massplay ( auto syncs )", function()
             obj.Parent = lp.Character
             obj.Remote:FireServer("PlaySong", ID)
             wait(0)
-            for _, obj in next, workspace:GetDescendants() do
+            for _, obj in next, lp:GetDescendants() do
             	if obj:IsA("Sound") then
             		obj.TimePosition = TimePosition or 0
 				end
