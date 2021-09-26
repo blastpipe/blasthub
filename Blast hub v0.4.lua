@@ -279,7 +279,7 @@ local dupescript = [[
        data['CurrentAmount'] = data['CurrentAmount'] + 1
        writefile(file,game:GetService("HttpService"):JSONEncode(data))
    end
-   queue_on_teleport(readfile("%s"))
+   syn.queue_on_teleport(readfile("%s"))
    repeat
    game:GetService("TeleportService"):Teleport(game.PlaceId)    
    wait(0.5)
@@ -288,7 +288,7 @@ local dupescript = [[
 dupescript = string.format(dupescript,tostring(pos),file,"dupescript.lua")
 
 writefile('dupescript.lua',dupescript)
-queue_on_teleport(dupescript)
+syn.queue_on_teleport(dupescript)
 game:GetService("TeleportService"):Teleport(game.PlaceId)
 end)
 TimePos:addButton("Troll Player, sets time pos at a random number", function()
