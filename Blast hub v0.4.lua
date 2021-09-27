@@ -147,7 +147,7 @@ Misc:addButton("Grab tools", function()
 		if toolsget == true then
 			if pt:IsA("Tool") then
 				wait(0)
-				pt.Handle.CFrame =  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+				pt.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 			end
 		end
 	end)
@@ -294,14 +294,14 @@ end)
 TimePos:addButton("Troll Player, sets time pos at a random number", function()
 	    for _, obj in next, Target2.Character:GetDescendants() do
         if obj:IsA("Sound") then
-            obj.TimePosition = math.random(60)
+            obj.TimePosition = math.random(0, 60)
         end
     end
 end)
 TimePos:addButton("Troll Server, sets time pos at a random number",function()
 	    for _, obj in next, Workspace:GetDescendants() do
         if obj:IsA("Sound") then
-            obj.TimePosition = math.random(70)
+            obj.TimePosition = math.random(0, 70)
         end
     end
 end)
