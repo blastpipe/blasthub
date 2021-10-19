@@ -6,8 +6,6 @@ local Muting = UI:addPage("Muting",1,false,0)
 local TimePos = UI:addPage("Time Pos",1,false,0)
 local Misc = UI:addPage("Misc",1,false,0)
 local lp = game.Players.LocalPlayer
-Home:addLabel("this was made by blastpipe#","with a lot help from graveyardunit")
-Home:addLabel("shit balls sex,"ok")
 Home:addButton("Copy Discord Link",function()
 	setclipboard("https://discord.gg/qT3qUnkS9B")
 	        game.StarterGui:SetCore("SendNotification",{
