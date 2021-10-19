@@ -6,9 +6,8 @@ local Muting = UI:addPage("Muting",1,false,0)
 local TimePos = UI:addPage("Time Pos",1,false,0)
 local Misc = UI:addPage("Misc",1,false,0)
 local lp = game.Players.LocalPlayer
-Home:addLabel("this was made by blastpipe#4719","with a lot help from graveyardunit")
-Home:addLabel("This is a private hub as of now","for now, only the users of this hub have a time pos mute")
-Home:addLabel("I will update this in my free time","i sleep a lot so dont expect a lot of updates")
+Home:addLabel("this was made by blastpipe#","with a lot help from graveyardunit")
+Home:addLabel("shit balls sex,"ok")
 Home:addButton("Copy Discord Link",function()
 	setclipboard("https://discord.gg/qT3qUnkS9B")
 	        game.StarterGui:SetCore("SendNotification",{
