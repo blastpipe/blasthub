@@ -83,7 +83,7 @@ Muting:addButton("Mute", function()
 	repeat wait()
 		 for _, obj in next, Target.Character:GetDescendants() do
 			if obj:IsA("Sound") then
-				obj.TimePosition = TimePosition or 0
+				obj.Playing = false
 			end
 		end
 	until timemute == false
@@ -98,7 +98,7 @@ Muting:addButton("Mute server", function()
 	repeat wait()
 		 for _, obj in next, workspace:GetDescendants() do
 			if obj:IsA("Sound") then
-				obj.TimePosition = TimePosition or 0
+				obj.Playing = false
 			end
 		end
 	until servertimemute == false
